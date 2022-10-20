@@ -6,19 +6,36 @@
     padding: 0 5%;
     width: 75%;
     margin: auto;
-
+    position: relative;
 }
   
 .column {
     margin: auto;
     flex: 100%;
     padding: 0 1%;
+    position: relative;
 }
 
 .column img {
+    padding: 0.5%;
     width: 400px;
     height: 275px;
     margin: auto;
     vertical-align: middle;
-    padding: 0.5%;
+    position: relative;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+}
+
+.column img:hover {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+}
+
+.menu_buttons {
+    width: 100%;
+    margin: auto;
+    display: block;
+    position: relative;
+    align-content: center;
 }
