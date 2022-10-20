@@ -1,5 +1,7 @@
 body {
     background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -22,11 +24,81 @@ body {
     color: white;
 }
 
-.navbar img {
-    width: 90px;
-    height: 25px;
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color: white;
 }
 
-#logo:hover {
+.navbar img {
+    width: 75px;
+    height: 20px;
+}
+
+/* Add a black background color to the top navigation */
+.navbar2 {
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+/* Style the links inside the navigation bar */
+.navbar2 a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar2 a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+/* Add a color to the active/current link */
+.navbar2 a.active {
     background-color: white;
+    }
+
+.navbar2 img {
+    background-color: black;
+    width: 75px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.logo_img {
+    background-color: black;
+}
+
+.logo_img a:hover {
+    background-color: black;
+}
+
+.login {
+    width: 75%;
+    margin: 10px auto;
+    text-align: left;
+    background-color: rgb(239, 239, 239);
+    border: 1px solid black;
+    
+}
+
+form {
+    margin: 10px;
+    padding: 10px;
+}   
+
+.form_button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #023cba;
+    color: white;
+}
+
+.form_button:hover {
+    background-color: white;
+    color: black;
 }
