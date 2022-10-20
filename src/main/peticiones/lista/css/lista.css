@@ -1,1 +1,15 @@
 @import url("/src/main/main.css");
+
+div.lista_pet{
+    text-align: center;
+    margin-left: auto;
+}
+
+table, tr, td{
+    text-align: center;
+    border: 1px solid black;
+}
+
+table{
+    width: auto;
+}
