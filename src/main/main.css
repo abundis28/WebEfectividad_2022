@@ -2,7 +2,6 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: "Lexend Deca";
 }
 
 .navbar {
@@ -18,7 +17,7 @@ body {
     padding: 2% 2%;
     text-decoration: none;
     font-size: 17px;
-    font-family: "Lexend Deca";
+    font-family: 'Lexend Deca';
 }
 
 .navbar a:hover {
@@ -27,24 +26,48 @@ body {
 }
 
 .navbar img {
-    width: 75px;
-    height: 20px;
+    width: 120px;
+    height: 33px;
     background-color: white;
-    margin: auto;
 }
 
 .navbar img:hover {
     background-color: white;
 }
 
+#logo {
+    padding: 1.5%;
+}
+
 #logo:hover {
     background-color: white;
 }
 
-.login {
-    width: 75%;
-    margin: 10px auto;
-    text-align: left;
-    background-color: rgb(239, 239, 239);
-    border: 1px solid black;
+#logout {
+    float: right;
+}
+
+#menu_grid {
+    margin: 20px auto;
+    width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 0.5%;
+    grid-row-gap: 5%;
+}
+
+#menu_grid img {
+    width: 400px;
+    height: 275px;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    filter: brightness(1);
+}
+
+#menu_grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.6);
 }
