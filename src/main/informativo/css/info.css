@@ -1,1 +1,32 @@
 @import url("/src/main/main.css");
+
+#help_grid {
+    margin: auto;
+    padding-top: 35px;
+    height: 70%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 1%;
+    justify-content: center;
+}
+
+#help_grid a {
+    width: 375px;
+    height: 250px;
+}
+
+#help_grid img {
+    width: 375px;
+    height: 250px;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    filter: brightness(1);
+    margin: 0;
+    padding: 0;
+}
+
+#help_grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.6);
+}
