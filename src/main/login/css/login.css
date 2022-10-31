@@ -1,6 +1,7 @@
 @import url("/src/main/main.css");
 
 #contenedor-login {
+    margin: auto;
     width: 50%;
     height: 70%;
     display: grid;

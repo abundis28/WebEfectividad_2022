@@ -1,8 +1,8 @@
 @import url("/src/main/main.css");
 
 :root {
-    --level-1: #8dccad;
-    --level-2: #f5cc7f;
+    --nivel-1: #8dccad;
+    --nivel-2: #f5cc7f;
     --level-3: #7b9fe0;
     --level-4: #f27c8d;
     --black: black;
@@ -26,20 +26,20 @@ body {
     margin: 0 auto;
 }
 
-.rectangle {
+.rectangulo {
     position: relative;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.level-1 {
+.nivel-1 {
     width: 175px;
     height: 250px;
     margin: 0 auto 40px;
-    background: var(--level-1);
+    background: var(--nivel-1);
 }
    
-.level-1::before {
+.nivel-1::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -50,14 +50,14 @@ body {
     background: var(--black);
 }
 
-.level-2-wrapper {
+.nivel-2-wrapper {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 0;
 }
    
-.level-2-wrapper::before {
+.nivel-2-wrapper::before {
     content: "";
     position: absolute;
     top: -20px;
@@ -67,11 +67,11 @@ body {
     background: var(--black);
 }
 
-.level-2-wrapper li {
+.nivel-2-wrapper li {
     position: relative;
 }
 
-.level-2-wrapper > li::before {
+.nivel-2-wrapper > li::before {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -82,9 +82,9 @@ body {
     background: var(--black);
 }
 
-.level-2 {
+.nivel-2 {
     width: 175px;
     height: 250px;
     margin: 0 auto 40px;
-    background: var(--level-2);
+    background: var(--nivel-2);
 }
