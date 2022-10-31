@@ -6,7 +6,7 @@
     height: 70%;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 1%;
+    grid-column-gap: 2%;
     justify-content: center;
 }
 
@@ -16,7 +16,7 @@
 }
 
 #help_grid img {
-    width: 375px;
+    width: 380px;
     height: 250px;
     align-items: center;
     justify-content:center;
