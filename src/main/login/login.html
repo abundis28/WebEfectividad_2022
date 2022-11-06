@@ -1,22 +1,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Efectividad Institucional</title>
+        <title>Login - DEI</title>
         <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
         <link rel="stylesheet" href="/src/main/login/css/login.css">
     </head>
-    <body>
-        <h1>Inicio de sesión</h1>    
-        <div class="espacio_l"></div>
+    <body> 
         <div id="contenedor-login">
-            <div id="holder-error-login">
-                <p id="error-login"> <span id="error-msg-second-line">and/or password</span></p>
+            <h1>Efectividad Institucional</h1>
+            <h2>Inicio de sesión</h2>
+            <img src="/src/resources/logo.png" alt="Logo del Tecnológico de Monterrey">
+            <div id="contenedor-error-login">
+                <p id="error-login">Credenciales no válidas</p>
             </div>
               
             <form id="login-form">
-                <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-                <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-                <input type="submit" value="Login" id="login-form-submit">
+                <input type="text" name="login-usuario" id="input-usuario" placeholder="Usuario">
+                <input type="password" name="login-password" id="input-password" placeholder="Contraseña">
+                <input type="submit" value="Ingresar">
             </form>
         </div>
     </body>

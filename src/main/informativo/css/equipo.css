@@ -3,8 +3,6 @@
 :root {
     --nivel-1: #8dccad;
     --nivel-2: #f5cc7f;
-    --level-3: #7b9fe0;
-    --level-4: #f27c8d;
     --black: black;
 }
 
@@ -22,38 +20,38 @@ body {
 
 .grafica-equipo {
     max-width: 2000px;
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0 auto;
 }
 
-.rectangulo {
+.nivel-1-wrapper {
     position: relative;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: grid;
+    padding: 0;
+    margin: 0;
 }
 
 .nivel-1 {
     width: 175px;
     height: 250px;
     margin: 0 auto 40px;
-    background: var(--nivel-1);
 }
    
 .nivel-1::before {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 86%;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 20px;
-    background: var(--black);
+    height: 37px;
+    background: black;
 }
 
 .nivel-2-wrapper {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 0;
 }
    
@@ -61,10 +59,10 @@ body {
     content: "";
     position: absolute;
     top: -20px;
-    left: 12.5%;
-    width: 75%;
+    left: 25%;
+    width: 50%;
     height: 2px;
-    background: var(--black);
+    background: black;
 }
 
 .nivel-2-wrapper li {
@@ -79,12 +77,14 @@ body {
     transform: translateX(-50%);
     width: 2px;
     height: 20px;
-    background: var(--black);
+    background: black;
 }
 
 .nivel-2 {
-    width: 175px;
+    margin: 0 auto;
+}
+
+.img-equipo {
+    width: 140px;
     height: 250px;
-    margin: 0 auto 40px;
-    background: var(--nivel-2);
 }
