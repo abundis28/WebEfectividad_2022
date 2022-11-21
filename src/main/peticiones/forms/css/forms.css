@@ -62,6 +62,19 @@ form input[type = text]{
     font-size: 1em;
 }
 
+textarea{
+    width: 95%;
+    background-color: rgb(245, 245, 245);
+    border-color:  rgb(230, 230, 230);
+    border-style: double;
+    border-width: 2px;
+    resize: none;
+    font-size: 1em;
+    color: gray;
+    width: 80%;
+}
+
+
 .button_div{
     text-align: center;
     float: right;
