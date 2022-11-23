@@ -3,16 +3,15 @@
     <?php
 
     $servidor = "localhost";
-    $usuario = $_POST["input-usuario"];
-    $password = $_POST["input-password"];
+    $usuario = $_POST["login-usuario"];
+    $password = $_POST["login-password"];
     $baseDeDatos = "efectividad";
 
     if(!($conexion = mysqli_connect($servidor, $usuario, $password))){
         echo "Error conectando a la base de datos. <br>";
         exit();
     }else{
-        echo "Listo, estamos conectados. <br>";
-        echo "Bienvenido $usuario";
+        header("Location: /WebEfectividad_2022/src/main/menu/menu.html");
     }
 
     if(!mysqli_select_db($conexion, $baseDeDatos)){
