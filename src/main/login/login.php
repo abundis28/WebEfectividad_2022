@@ -1,16 +1,14 @@
 <?php
-    include "../conexionBD.php";
-    include "../credentials.php";
+  
+    require ("../conexionBD.php");
 
-    $usuarioInput = $_POST["login-usuario"];
-    $passwordInput = $_POST["login-password"];
-
-    $usuario = $usuarioInput;
-    $password = $passwordInput;
+    session_start();
+    $_SESSION['usuario'] = $_POST["login-usuario"];
+    $_SESSION['password'] = $_POST["login-password"];
 
 
     try{
-        connect($usuario, $password);
+        connect($_SESSION['usuario'], $_SESSION['password']);
         header("Location:/WebEfectividad_2022/src/main/menu/menu.html");
         mysqli_close($conexion);
     }catch(Exception $e){

@@ -10,14 +10,12 @@
             <a href="/WebEfectividad_2022/src/main/menu/menu.html" id="logo"><img src="/WebEfectividad_2022/src/resources/logo.png" alt="Logo del Tecnológico de Monterrey."></a>
             <a href="/WebEfectividad_2022/src/main/menu/menu.html">Inicio</a>
             <a href="/WebEfectividad_2022/src/main/informativo/ayuda.html">Ayuda</a>
-            <a id="logout" href="/WebEfectividad_2022/src/main/login/login.html">Cerrar sesión</a>
+            <a id="logout" href="/WebEfectividad_2022/src/main/logout/logout.php">Cerrar sesión</a>
         </div>  
         <div class="lista_pet">
             <h2>Seguimiento de Peticiones</h2>
-
             <table>
                 <tr>
-                    <th>No.</th>
                     <th>PETICIÓN</th>
                     <th>SOLICITANTE</th>
                     <th>FECHA DE ALTA</th>
@@ -26,23 +24,12 @@
                     <th>ESTADO</th>
                     <th>ASIGNADO</th>
                     <th>FECHA COMPROMISO DE ENTREGA</th>
-                    <th>VER PETICIÓN</th>
                 </tr>
                 <?php
-                    include("../conexionBD.php");
-
-                    $query = "SELECT peticion, nombre, fecha, fechaA, fechaT, estado, asignado, entrega FROM peticiones";
-                    $result = consultaBD($query);
-
-                    if(!$result) 
-                        die(mysqli_error());
-
-                    while($row = mysqli_fetch_array($result)) {
-                        echo '<tr><td>'.$row['nombre'].'</td>';
-                        }
+                    include ('consulta.php');
                 ?>
-            </table>
-        </div>     
+            </table>  
+        </div>      
     </body>
 </html>
 

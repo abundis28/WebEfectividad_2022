@@ -1,7 +1,3 @@
-CREATE DATABASE `efectividad` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-
--- efectividad.altamanual definition
-
 -- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
 -- Host: localhost    Database: efectividad
@@ -72,8 +68,8 @@ CREATE TABLE `peticiones` (
   `fechaAsignacion` datetime DEFAULT NULL,
   `fechaTerminacion` datetime DEFAULT NULL,
   `nominaSolicitante` varchar(100) DEFAULT NULL,
-  KEY `peticiones_FK` (`asignado`),
   KEY `peticiones_FK_1` (`nominaSolicitante`),
+  KEY `peticiones_FK` (`asignado`),
   CONSTRAINT `peticiones_FK` FOREIGN KEY (`asignado`) REFERENCES `operarios` (`nomina`),
   CONSTRAINT `peticiones_FK_1` FOREIGN KEY (`nominaSolicitante`) REFERENCES `solicitantes` (`nomina`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -85,7 +81,7 @@ CREATE TABLE `peticiones` (
 
 LOCK TABLES `peticiones` WRITE;
 /*!40000 ALTER TABLE `peticiones` DISABLE KEYS */;
-INSERT INTO `peticiones` VALUES (1,'Grupos','Laguna, Eugenio Garza Laguera, Valle Alto','Profesional Tec21','05/2023','Apellido Materno, Matricula, Nombre','Faucibus Orci Luctus Consulting','pede. Suspendisse dui.','risus varius orci,','Asignada',NULL,'aliquam.rutrum@tec.com','Ricardo González','0000-00-00 00:00:00','2023-05-18 17:31:00','2023-03-20 22:44:00','2023-07-21 08:41:00',NULL),(2,'Grupos','Valle Alto, Saltillo','Maestria','10/2023','Semestre, Carrera, Nombre','Aliquam Fringilla LLC','vel pede','in sodales elit','Atendida',NULL,'ante.lectus@tec.com','Alejandro Octavio García','0000-00-00 00:00:00','2022-11-22 00:50:00','2022-09-19 12:41:00','2021-12-08 21:16:00',NULL),(3,'Graduados','Valle Alto','Doctorado','02/2022','Nombre, Apellido Paterno','Neque Non Quam PC','blandit congue. In scelerisque scelerisque','cursus. Integer','Por asignar',NULL,'velit@tec.com','Alejandro Octavio García','0000-00-00 00:00:00','2023-06-11 17:04:00','2023-08-09 07:38:00','2022-08-18 11:10:00',NULL),(4,'Profesores','Eugenio Garza Sada, Laguna','Profesional Planes Anteriores','01/2023','Apellido Materno, Nombre','Turpis Consulting','laoreet, libero et tristique pellentesque,','cursus vestibulum. Mauris','Atendida','N07183763','agarcia@tec.com','Ana Isabel Valenzuela','2005-08-23 00:00:00','2023-09-17 04:39:00','2022-08-03 11:56:00','2023-07-28 10:10:00','A06615160'),(5,'Bajas','Eugenio Garza Laguera','Preparatoria','10/2023','Apellido Materno','In Molestie Tortor Company','placerat velit. Quisque varius. Nam','Proin velit.','Por asignar',NULL,'cursus.vestibulum@tec.com','Alejandro Octavio García','0000-00-00 00:00:00','2023-02-21 06:41:00','2023-02-20 18:57:00','2022-04-29 18:46:00',NULL);
+INSERT INTO `peticiones` VALUES (1,'Grupos','Laguna, Eugenio Garza Laguera, Valle Alto','Profesional Tec21','05/2023','Apellido Materno, Matricula, Nombre','Faucibus Orci Luctus Consulting','pede. Suspendisse dui.','risus varius orci,','Asignada','N00468870','aliquam.rutrum@tec.com','Ricardo González','2005-08-23 00:00:00','2023-05-18 17:31:00','2023-03-20 22:44:00','2023-07-21 08:41:00','A03876145'),(2,'Grupos','Valle Alto, Saltillo','Maestria','10/2023','Semestre, Carrera, Nombre','Aliquam Fringilla LLC','vel pede','in sodales elit','Atendida','N02117251','ante.lectus@tec.com','Alejandro Octavio García','2005-08-25 00:00:00','2022-11-22 00:50:00','2022-09-19 12:41:00','2021-12-08 21:16:00','A06425528'),(3,'Graduados','Valle Alto','Doctorado','02/2022','Nombre, Apellido Paterno','Neque Non Quam PC','blandit congue. In scelerisque scelerisque','cursus. Integer','Por asignar','N09136393','velit@tec.com','Alejandro Octavio García','2005-09-25 00:00:00','2023-06-11 17:04:00','2023-08-09 07:38:00','2022-08-18 11:10:00','A06148352'),(4,'Profesores','Eugenio Garza Sada, Laguna','Profesional Planes Anteriores','01/2023','Apellido Materno, Nombre','Turpis Consulting','laoreet, libero et tristique pellentesque,','cursus vestibulum. Mauris','Atendida','N09136393','agarcia@tec.com','Ana Isabel Valenzuela','2005-09-25 00:00:00','2023-09-17 04:39:00','2022-08-03 11:56:00','2023-07-28 10:10:00','A06615160'),(5,'Bajas','Eugenio Garza Laguera','Preparatoria','10/2023','Apellido Materno','In Molestie Tortor Company','placerat velit. Quisque varius. Nam','Proin velit.','Por asignar','N07183763','cursus.vestibulum@tec.com','Alejandro Octavio García','2005-09-25 00:00:00','2023-02-21 06:41:00','2023-02-20 18:57:00','2022-04-29 18:46:00','A07484367');
 /*!40000 ALTER TABLE `peticiones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +98,6 @@ CREATE TABLE `solicitantes` (
   `titulo` varchar(10) DEFAULT NULL,
   `departamento` text DEFAULT NULL,
   `campus` varchar(5) DEFAULT NULL,
-  `estado` int(11) DEFAULT NULL,
   `correo` varchar(100) DEFAULT NULL,
   `telefono` varchar(50) NOT NULL,
   PRIMARY KEY (`nomina`)
@@ -115,13 +110,9 @@ CREATE TABLE `solicitantes` (
 
 LOCK TABLES `solicitantes` WRITE;
 /*!40000 ALTER TABLE `solicitantes` DISABLE KEYS */;
-INSERT INTO `solicitantes` VALUES ('A03876145','Kitra Davis','Prof.','Accounting','Salti',NULL,'kitradavis3915@tec.com','81-2012-8227'),('A06148352','Jermaine Smith','Esp.','Tech Support','Salti',NULL,'jermainesmith5254@tec.com','81-5513-1362'),('A06425528','Quinn Scott','Mtro.','Finances','Monte',NULL,'quinnscott@tec.com','81-1151-5149'),('A06615160','Hiram Haynes','Prof.','Tech Support','Monte',NULL,'hiramhaynes3793@tec.com','81-5870-7625'),('A07484367','Berk Pate','Prof.','Customer Relations','Cd. J',NULL,'berkpate@tec.com','81-7466-3414');
+INSERT INTO `solicitantes` VALUES ('A03876145','Kitra Davis','Prof.','Accounting','Salti','kitradavis3915@tec.com','81-2012-8227'),('A06148352','Jermaine Smith','Esp.','Tech Support','Salti','jermainesmith5254@tec.com','81-5513-1362'),('A06425528','Quinn Scott','Mtro.','Finances','Monte','quinnscott@tec.com','81-1151-5149'),('A06615160','Hiram Haynes','Prof.','Tech Support','Monte','hiramhaynes3793@tec.com','81-5870-7625'),('A07484367','Berk Pate','Prof.','Customer Relations','Cd. J','berkpate@tec.com','81-7466-3414');
 /*!40000 ALTER TABLE `solicitantes` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'efectividad'
---
 
 --
 -- Dumping routines for database 'efectividad'
@@ -136,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-23 22:25:11
+-- Dump completed on 2022-11-24 18:11:04

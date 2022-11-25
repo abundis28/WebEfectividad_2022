@@ -1,5 +1,5 @@
 <?php
-include ("credentials.php");
+session_start();
 
 function connect($usuario, $password){
     if(!($conexion = mysqli_connect("localhost", $usuario, $password, "efectividad"))){
@@ -10,7 +10,7 @@ function connect($usuario, $password){
 }
 
 function consultaBD($consulta){
-    $resultado = mysqli_query(mysqli_connect("localhost", $usuario, $password, "efectividad"), $consulta);
+    $resultado = mysqli_query(mysqli_connect("localhost", $_SESSION['usuario'], $_SESSION['password'], "efectividad"), $consulta);
     if($resultado){
         return $resultado;
     }else{
