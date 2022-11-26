@@ -9,8 +9,4 @@
         die(mysqli_error());
 
 
-$id=$_POST["detalles"];
-
-echo $id;
-
 ?>
