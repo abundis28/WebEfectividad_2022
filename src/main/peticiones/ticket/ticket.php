@@ -14,14 +14,14 @@
         </div>
         <div class="consultaPeticion">
             <h2>CONSULTAR PETICIÓN</h2>
-                <?php
-                    include 'recuperarDatos.php';
-                ?>
             <h3>Datos del solicitante</h3>
                 <?php
                     include 'datosSolicitante.php';
                 ?>
             <h3>Datos de la petición</h3>
+                <?php
+                    include 'datosSolicitud.php';
+                ?>
         </div>
     </body>
 </html>
