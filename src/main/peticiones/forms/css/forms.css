@@ -45,6 +45,7 @@ form{
     text-align: left;
     border-radius: 5px;
     color: gray;
+    font-family: 'Lexend Deca';
 }
 
 form label{
@@ -83,4 +84,39 @@ textarea{
 form input[type = submit]{
     font-size: 1em;
     width: 150%;
+}
+
+form input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+label {
+    display: contents!important;
+
+}
+
+.formCat {
+    font-weight: bold;
+}
+
+form select{
+    width: 80%;
+}
+
+.colLeft{
+    float: left;
+    width: 50%;
+}
+
+.colRight{
+    float: right;
+    width: 50%;
+}
+
+select {
+    font-family: 'Lexend Deca';   
+}
+
+option {
+    font-family: 'Lexend Deca';   
 }
