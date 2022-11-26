@@ -25,7 +25,7 @@
                     ?>
                 <h3>Estatus de la petición</h3>
                     <?php
-                        include 'datosSolicitud.php';
+                        include 'estatusSolicitud.php';
                     ?>
             </div>
         </div>
