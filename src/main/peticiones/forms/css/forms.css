@@ -18,11 +18,13 @@ form {
     padding: 10px;
     background-color: #023cba;
     color: white;
+    font-family: 'Lexend Deca';
 }
 
 .form_button:hover {
     background-color: white;
     color: black;
+    font-family: 'Lexend Deca';
 }
 
 div.formulario {
@@ -79,6 +81,7 @@ textarea{
 .button_div{
     text-align: center;
     float: right;
+    font-family: 'Lexend Deca';   
 }
 
 form input[type = submit]{
