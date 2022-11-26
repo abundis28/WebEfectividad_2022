@@ -1,1 +1,7 @@
 @import url("/WebEfectividad_2022/src/main/main.css");
+
+h2, h3{
+    font-family: 'Lexend Deca';
+    text-align: center;
+    color: #023cba  ;
+}

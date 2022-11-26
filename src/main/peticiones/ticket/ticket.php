@@ -1,9 +1,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Petición - DEI</title>
+        <title>Listado de peticiones - DEI</title>
         <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
-        <link rel="stylesheet" href="/WebEfectividad_2022src/main/peticiones/ticket/css/ticket.css">
+        <link rel="stylesheet" href="/WebEfectividad_2022/src/main/peticiones/ticket/css/ticket.css">
     </head>
     <body>
         <div class="navbar">
@@ -14,9 +14,14 @@
         </div>
         <div class="consultaPeticion">
             <h2>CONSULTAR PETICIÓN</h2>
-            <?php
-            include 'consultaTicket'.php;
-            ?>
+                <?php
+                    include 'recuperarDatos.php';
+                ?>
+            <h3>Datos del solicitante</h3>
+                <?php
+                    include 'datosSolicitante.php';
+                ?>
+            <h3>Datos de la petición</h3>
         </div>
     </body>
 </html>
