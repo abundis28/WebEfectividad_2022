@@ -2,7 +2,7 @@
     $id = $_SESSION['id'];
 
 
-    $query = "SELECT id, nominaSolicitante, nombre, correo, telefono, titulo, departamento, campus, poblacion, campusConsulta, nivelAcademico, periodos, camposInformacion, condiciones, uso, comentarios, estado, asignado, opeMail, fechaAlta, asignadoPor, fechaEntrega, fechaAsignacion, fechaTerminacion FROM peticiones p, solicitantes s, operarios o WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina AND id='$id'";
+    $query = "SELECT poblacion, campusConsulta, nivelAcademico, periodos, camposInformacion, condiciones, uso, comentarios FROM peticiones WHERE id='$id'";
     $result = consultaBD($query);
 
     if(!$result) 
@@ -10,11 +10,12 @@
 
 
     $data = mysqli_fetch_array($result);
-    echo 'Nomina: ' . $data['nomina'] . '<br>';
-    echo 'Nombre: ' . $data['nombre'] . '<br>';
-    echo 'Correo: ' . $data['correo'] . '<br>';
-    echo 'Telefono/ext: ' . $data['telefono'] . '<br>';
-    echo 'Trato: ' . $data['titulo'] . '<br>';
-    echo 'Departament/Area: ' . $data['departamento'] . '<br>';
-    echo 'Escuela/Campus: ' . $data['campus'] . '<br>';
+    echo 'Población: ' . $data['poblacion'] . '<br>';
+    echo 'Campus: ' . $data['campusConsulta'] . '<br>';
+    echo 'Nivel Académico: ' . $data['nivelAcademico'] . '<br>';
+    echo 'Periodos: ' . $data['periodos'] . '<br>';
+    echo 'Campos de Información: ' . $data['camposInformacion'] . '<br>';
+    echo 'Condiciones: ' . $data['departamento'] . '<br>';
+    echo 'Uso: ' . $data['campus'] . '<br>';
+    echo 'Comentarios: ' . $data['comentarios'] . '<br>';
 ?>
