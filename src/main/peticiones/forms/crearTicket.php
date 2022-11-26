@@ -1,43 +1,63 @@
 <?php
     require("../../conexionBD.php");
 
-    $poblacion = $_POST['pop'];
-    
-    echo $poblacion;
-
-    $campus = $_POST['campus'];
-    $Ncamp = count($campus);
-    for($icamp = 0; $icamp < $Ncamp; $icamp++) {
-        echo $campus[$icamp];
+    if(!(isset($_POST['pop']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $poblacion = $_POST['pop'];
     }
 
-    $nivel = $_POST['nivel'];
-    $Nnivel = count($nivel);
-    for($inivel = 0; $inivel < $Nnivel; $inivel++) {
-        echo $nivel[$inivel];
+    if(!(isset($_POST['campus']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $campus = $_POST['campus'];
+        $campusStr = implode(', ', $campus);
     }
 
-    $periodo = $_POST['period'];
-    echo $periodo;
+    if(!(isset($_POST['nivel']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $nivel = $_POST['nivel'];
+        $nivelStr = implode(', ', $nivel);
+    }
 
-    $info = $_POST['info'];
-    echo $info;
+    if(!(isset($_POST['period']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $periodo = $_POST['period'];
+    }
 
-    $condiciones = $_POST['conditions'];
-    echo $condiciones;
+    if(!(isset($_POST['info']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $info = $_POST['info'];
+    }
 
-    $informacion = $_POST['idk'];
-    echo $informacion;
+    if(!(isset($_POST['conditions']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $condiciones = $_POST['conditions'];
+    }
 
-    $comentarios= $_POST['comments'];
-    echo $comentarios;
+    if(!(isset($_POST['idk']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $informacion = $_POST['idk'];
+    }
 
-    // $consulta = "INSERT INTO peticiones(matricula, nombre, apellido, nota) VALUES('00123567', 'George', 'Smith', 8) ";
-    // $resultado = consultaBD($consulta);
+    if(!(isset($_POST['comments']))) {
+        echo 'faltan valores de llenar';
+    } else {
+        $comentarios= $_POST['comments'];
+    }
 
-    // if($resultado == FALSE){
-    //     die(mysqli_error());
-    // }else{
-    //     echo "<br> Datos guardados. <br>";
-    // }
+    $consulta = "INSERT INTO peticiones(poblacion, campusConsulta, nivelAcademico, periodos, camposInformacion, condiciones, uso, comentarios, estado) 
+                VALUES('$poblacion', '$campusStr', '$nivelStr', '$periodo', '$info', '$condiciones', '$informacion', '$comentarios', Por Asignar)";
+    $resultado = consultaBD($consulta);
+
+    if($resultado == FALSE){
+        die(mysqli_error());
+    }else{
+        echo "<br> Datos guardados. <br>";
+    }
 ?>
