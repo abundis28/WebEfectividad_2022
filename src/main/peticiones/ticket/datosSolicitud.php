@@ -15,7 +15,7 @@
     echo 'Nivel Académico: ' . $data['nivelAcademico'] . '<br>';
     echo 'Periodos: ' . $data['periodos'] . '<br>';
     echo 'Campos de Información: ' . $data['camposInformacion'] . '<br>';
-    echo 'Condiciones: ' . $data['departamento'] . '<br>';
-    echo 'Uso: ' . $data['campus'] . '<br>';
+    echo 'Condiciones: ' . $data['condiciones'] . '<br>';
+    echo 'Uso: ' . $data['uso'] . '<br>';
     echo 'Comentarios: ' . $data['comentarios'] . '<br>';
 ?>
