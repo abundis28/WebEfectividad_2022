@@ -1,15 +1,50 @@
 @import url("/WebEfectividad_2022/src/main/main.css");
 
-div.lista_pet{
+h2, tr{
     text-align: center;
-    margin-left: auto;
+    color: #023cba  ;
 }
 
-table, tr, td{
-    text-align: center;
-    border: 1px solid black;
+th{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #023cba;
 }
 
 table{
-    width: auto;
+    font-family: 'Lexend Deca';
+    width: 95%;
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.autowidth td{
+    white-space:nowrap;
+}
+
+
+tr:nth-child(even){
+    background-color: rgb(2, 60, 186, 0.2);
+  }
+
+
+button[type=submit] {
+    color: #023cba;
+    overflow: hidden;
+    border: none;
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Lexend Deca';
+    background-color: transparent;
+}
+
+button[type=submit]:hover {
+    background-color: #023cba;
+    color: white;
+    width: 100%;
 }
