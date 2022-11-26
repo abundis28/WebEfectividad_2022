@@ -13,15 +13,21 @@
             <a id="logout" href="/WebEfectividad_2022/src/main/logout/logout.php">Cerrar sesión</a>
         </div>
         <div class="consultaPeticion">
-            <h2>CONSULTAR PETICIÓN</h2>
-            <h3>Datos del solicitante</h3>
-                <?php
-                    include 'datosSolicitante.php';
-                ?>
-            <h3>Datos de la petición</h3>
-                <?php
-                    include 'datosSolicitud.php';
-                ?>
+            <div class="datosPeticion">
+                <h2>CONSULTAR PETICIÓN</h2>
+                <h3>Datos del solicitante</h3>
+                    <?php
+                        include 'datosSolicitante.php';
+                    ?>
+                <h3>Datos de la petición</h3>
+                    <?php
+                        include 'datosSolicitud.php';
+                    ?>
+                <h3>Estatus de la petición</h3>
+                    <?php
+                        include 'datosSolicitud.php';
+                    ?>
+            </div>
         </div>
     </body>
 </html>
