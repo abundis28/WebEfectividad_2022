@@ -16,7 +16,7 @@
             <h2>Seguimiento de Peticiones</h2>
             <table>
                 <tr>
-                    <th>PETICIÓN</th>
+                    <th>No.</th>
                     <th>SOLICITANTE</th>
                     <th>FECHA DE ALTA</th>
                     <th>FECHA DE ASIGNACIÓN</th>
@@ -24,6 +24,7 @@
                     <th>ESTADO</th>
                     <th>ASIGNADO</th>
                     <th>FECHA COMPROMISO DE ENTREGA</th>
+                    <th>VER PETICIÓN</th>
                 </tr>
                 <?php
                     include ('consulta.php');

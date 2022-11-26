@@ -11,6 +11,12 @@
             <a href="/WebEfectividad_2022/src/main/menu/menu.html">Inicio</a>
             <a href="/WebEfectividad_2022/src/main/informativo/ayuda.html">Ayuda</a>
             <a id="logout" href="/WebEfectividad_2022/src/main/logout/logout.php">Cerrar sesión</a>
-        </div>        
+        </div>
+        <div class="consultaPeticion">
+            <h2>CONSULTAR PETICIÓN</h2>
+            <?php
+            include 'consultaTicket'.php;
+            ?>
+        </div>
     </body>
 </html>
