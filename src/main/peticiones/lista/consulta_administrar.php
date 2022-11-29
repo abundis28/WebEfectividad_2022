@@ -6,18 +6,27 @@
    $username = $_SESSION['usuario'];
 
 
-    $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega 
-    FROM peticiones p, solicitantes s, operarios o 
-    WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina
-    ORDER BY id";
-    echo '<script>console.log("Query text was created!"); </script>';
+   $query_user = "SELECT * FROM operarios WHERE username = \"$username\"";
+   $result_user = consultaBD($query_user);
+
+   if (mysqli_num_rows($result_user) != 0) {
+    while($row = mysqli_fetch_array($result_user)) {
+        $nomina = $row['nomina'];
+        $permisos = $row['permisos'];
+    }
+    if ($permisos == 3){
+        $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega 
+        FROM peticiones p, solicitantes s, operarios o 
+        WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina 
+        ORDER BY id";
+        echo '<script>console.log("Query text for permission lvl 2/3 was created!"); </script>';
+    }
+   }
+
     $result = consultaBD($query);
 
-    //
     echo '<script>console.log("Query was executed!"); </script>';
 
-    //WHERE s.username = "$username" AND p.nominaSolicitante = s.nomina
-    //WHERE s.username = \"$username\" AND 
     if(!$result) 
         die(mysqli_error());
 
