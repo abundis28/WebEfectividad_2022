@@ -7,8 +7,8 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="/WebEfectividad_2022/src/main/menu/menu.php" id="logo"><img src="/WebEfectividad_2022/src/resources/logo.png" alt="Logo del Tecnológico de Monterrey."></a>
-            <a href="/WebEfectividad_2022/src/main/menu/menu.php">Inicio</a>
+            <a href="/WebEfectividad_2022/src/main/menu/menu.html" id="logo"><img src="/WebEfectividad_2022/src/resources/logo.png" alt="Logo del Tecnológico de Monterrey."></a>
+            <a href="/WebEfectividad_2022/src/main/menu/menu.html">Inicio</a>
             <a href="/WebEfectividad_2022/src/main/informativo/ayuda.html">Ayuda</a>
             <a id="logout" href="/WebEfectividad_2022/src/main/logout/logout.php">Cerrar sesión</a>
         </div>  
