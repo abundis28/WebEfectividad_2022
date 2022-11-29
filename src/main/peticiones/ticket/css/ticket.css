@@ -6,6 +6,24 @@ h2, h3{
     color: #023cba  ;
 }
 
+.form_button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #023cba;
+    color: white;
+    font-family: 'Lexend Deca';
+}
+
+.form_button:hover {
+    background-color: white;
+    color: black;
+    font-family: 'Lexend Deca';
+}
+
+.button_div{
+    text-align: center;
+}
+
 .consultaPeticion {
     color: #023cba  ;
     width: 75%;
@@ -23,4 +41,8 @@ h2, h3{
     margin: 10px;
     padding: 10px;
 }
+
+
+
+
 
