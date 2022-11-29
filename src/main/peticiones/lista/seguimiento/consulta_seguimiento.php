@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require("../../conexionBD.php");
+    require("../../../conexionBD.php");
 
     $user = "{$_SESSION['usuario']}";
 
@@ -11,6 +11,8 @@
         $nomina = $row['nomina'];
         $permisos = $row['permisos'];
     }
+
+
 
     if ($permisos == 1){
         $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega FROM peticiones p, solicitantes s, operarios o WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina AND p.nominaSolicitante = '$nomina' ORDER BY id";

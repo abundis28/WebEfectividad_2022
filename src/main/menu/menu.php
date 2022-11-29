@@ -18,8 +18,8 @@
         <div class="espacio_s"></div>
         <div id="menu_grid">
             <a href="/WebEfectividad_2022/src/main/peticiones/forms/formulario.php"><img src="/WebEfectividad_2022/src/resources/Menu/Realizar.png" alt="Crear petición"></a>
-            <a href="/WebEfectividad_2022/src/main/peticiones/lista/lista_pet.php"><img src="/WebEfectividad_2022/src/resources/Menu/Seguimiento.png" alt="Dar seguimiento"></a>
-            <a href="/WebEfectividad_2022/src/main/peticiones/lista/lista_pet.php"><img src="/WebEfectividad_2022/src/resources/Menu/Atender.png" alt="Atender petición"></a>
+            <a href="/WebEfectividad_2022/src/main/peticiones/lista/seguimiento/lista_pet.php"><img src="/WebEfectividad_2022/src/resources/Menu/Seguimiento.png" alt="Dar seguimiento"></a>
+            <a href="/WebEfectividad_2022/src/main/peticiones/lista/atender/lista_pet.php"><img src="/WebEfectividad_2022/src/resources/Menu/Atender.png" alt="Atender petición"></a>
             <a href="/WebEfectividad_2022/src/main/peticiones/lista/lista_pet.php"><img src="/WebEfectividad_2022/src/resources/Menu/Administrar.png" alt="Administrar"></a>
         </div>
         <?php

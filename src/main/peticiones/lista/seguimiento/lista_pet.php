@@ -27,7 +27,7 @@
                     <th>VER PETICIÓN</th>
                 </tr>
                 <?php
-                    include ('consulta.php');
+                    include ('consulta_seguimiento.php');
                 ?>
             </table>  
         </div>      
