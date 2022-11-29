@@ -23,10 +23,10 @@ Es necesario crear la base de datos con el archivo *efectividad.sql*, así como 
 
 #### Permisos
 *Permiso 1:*
-!(src/resources/Permisos1.png)
+!(WebEfectividad_2022/src/resources/Permisos1.png)
 
 *Permiso 2:*
-!(src/resources/Permisos2.png)
+!(WebEfectividad_2022/src/resources/Permisos2.png)
 
 *Permiso 3:* Cuenta con todos los permisos. 
-!(src/resources/Permisos3.png)
+!(WebEfectividad_2022/src/resources/Permisos3.png)
