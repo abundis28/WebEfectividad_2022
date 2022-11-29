@@ -9,7 +9,7 @@
 
     try{
         connect($_SESSION['usuario'], $_SESSION['password']);
-        header("Location:/WebEfectividad_2022/src/main/menu/menu.html");
+        header("Location:/WebEfectividad_2022/src/main/menu/menu.php");
         mysqli_close($conexion);
     }catch(Exception $e){
         header("Location:/WebEfectividad_2022/src/main/login/login.html");
