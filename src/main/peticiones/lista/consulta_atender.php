@@ -8,7 +8,7 @@
 
     $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega 
     FROM peticiones p, solicitantes s, operarios o 
-    WHERE s.username = \"$username\" AND p.nominaSolicitante = s.nomina AND p.asignado=o.nomina
+    WHERE o.username = \"$username\" AND p.nominaSolicitante = s.nomina AND p.asignado=o.nomina
     ORDER BY id";
     echo '<script>console.log("Query text was created!"); </script>';
     $result = consultaBD($query);

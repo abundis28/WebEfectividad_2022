@@ -79,4 +79,5 @@ CREATE TABLE `solicitantes` (
 LOCK TABLES `solicitantes` WRITE;
 INSERT INTO `solicitantes` VALUES ('A03876145','Kitra Davis','Prof.','Accounting','Salti','kitradavis3915@tec.com','81-2012-8227','kdavis','password123',1),('A06148352','Jermaine Smith','Esp.','Tech Support','Salti','jermainesmith5254@tec.com','81-5513-1362','jsmith','password123',1),('A06425528','Quinn Scott','Mtro.','Finances','Monte','quinnscott@tec.com','81-1151-5149','qscott','password123',1),('A06615160','Hiram Haynes','Prof.','Tech Support','Monte','hiramhaynes3793@tec.com','81-5870-7625','hhaynes','password123',1),('A07484367','Berk Pate','Prof.','Customer Relations','Cd. J','berkpate@tec.com','81-7466-3414','bpate','password123',1);
 UNLOCK TABLES;
+ALTER TABLE efectividad.peticiones ADD CONSTRAINT peticiones_pk PRIMARY KEY (id);
 
