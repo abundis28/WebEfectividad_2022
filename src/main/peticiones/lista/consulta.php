@@ -1,7 +1,23 @@
 <?php
+    session_start();
     require("../../conexionBD.php");
 
-    $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega FROM peticiones p, solicitantes s, operarios o WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina ORDER BY id";
+    $user = "{$_SESSION['usuario']}";
+
+    $query_user = "SELECT * FROM operarios WHERE username = '$user'";
+    $result_user = consultaBD($query_user);
+
+    while($row = mysqli_fetch_array($result_user)) {
+        $nomina = $row['nomina'];
+        $permisos = $row['permisos'];
+    }
+
+    if ($permisos == 1){
+        $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega FROM peticiones p, solicitantes s, operarios o WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina AND p.nominaSolicitante = '$nomina' ORDER BY id";
+    } else {
+        $query = "SELECT id, nombre, fechaAlta, fechaAsignacion, fechaTerminacion, estado, operador, fechaEntrega FROM peticiones p, solicitantes s, operarios o WHERE p.nominaSolicitante = s.nomina AND p.asignado=o.nomina AND p.asignado = '$nomina' AND p.estado = 'Atendida' ORDER BY id";
+    }
+
     $result = consultaBD($query);
 
     while($row = mysqli_fetch_array($result)) {
