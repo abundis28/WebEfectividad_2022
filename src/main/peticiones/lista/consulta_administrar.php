@@ -1,10 +1,7 @@
 <?php
     require("../../conexionBD.php");
 
-    
-
    $username = $_SESSION['usuario'];
-
 
    $query_user = "SELECT * FROM operarios WHERE username = \"$username\"";
    $result_user = consultaBD($query_user);
@@ -31,7 +28,7 @@
         die(mysqli_error());
 
     while($row = mysqli_fetch_array($result)) {
-        echo '<tr><td>'.$row['id'].'</td><td>'.$row['nombre'].'</td><td>'.$row['fechaAlta'].'</td><td>'.$row['fechaAsignacion'].'</td><td>'.$row['fechaTerminacion'].'</td><td>'.$row['estado'].'</td><td>'.$row['operador'].'</td><td>'.$row['fechaEntrega'].'</td><td><form id=detalles action=../ticket/submitDetalles.php method=post><button id=detalles name=detalles type=submit value='.$row['id'].' class=detalles/>Detalles</button></form></td></tr>';
+        echo '<tr><td>'.$row['id'].'</td><td>'.$row['nombre'].'</td><td>'.$row['fechaAlta'].'</td><td>'.$row['fechaAsignacion'].'</td><td>'.$row['fechaTerminacion'].'</td><td>'.$row['estado'].'</td><td>'.$row['operador'].'</td><td>'.$row['fechaEntrega'].'</td><td><form id=detalles action=../ticket/submitDetallesAdministrar.php method=post><button id=detalles name=detalles type=submit value='.$row['id'].' class=detalles/>Detalles</button></form></td></tr>';
     }
 
 ?>
